@@ -1,2 +1,4 @@
-package org.example;public class Step1GithubApplication {
+package org.example;
+
+public class Step1GithubApplication {
 }
