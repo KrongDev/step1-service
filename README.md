@@ -103,5 +103,29 @@ git push == git push origin main
 
 ### 7. branch
 
-branch항목은 앞의 command들과 다르게 하나의 분류로 봐주면 좋겠다.
+branch가 무엇인가??
+
+branch는 쉽게 작업공간이라고 생각하면 된다.
+
+우리가 git init을 할경우 master라는 workspace가 생성되는데 이가 바로 branch다.
+
+branch는 보통 작업할 때 main branch(프로젝트에서 정의한 release branch) 기준으로 가장 최근 commit version으로 생성하게 된다.
+
+이렇게 새로운 기능을 작업할 때 새로만든 branch에서 작업하고 원본에 합쳐 버전관리를 하게 되는데 이는 원본을 보존하기 위한 이유가 가장 크다.
+
+    생성된 branch 확인: git branch
+    branch 생성하기: git branch <branch명>
+    branch 이동하기: git checkout <branch명>
+
+### 8. merge
+
+다른 branch에서 작업한 내용물을 내가 작업중인 branch로 가져오고 싶으면 `merge`기능을 사용하면 된다.
+
+    현재 branch에 merge: git merge <변경되어 가져올 branch>
+    source branch를 target branch에 merge: git merge <sourceBranch> <targetBranch>
+
+    주의사항: Merge 충돌이라해서 다른 branch작업물을 가져올 때 target branch에서 같은 파일을 수정할 경우 자주 발생한다.
+    이럴 때는 최대한 잘 합쳐주고 테스트를 진행해보기를 추천한다.(이때 코드가 많이 날라가면 뭔가 잘못된거다...)
+
+참고자료 : https://git-scm.com/book
 
